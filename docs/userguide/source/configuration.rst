@@ -82,9 +82,8 @@ Assuming you defined the ``BackupLocation`` resource in a file called
 At this time, *Kubedr* will initialize a backup repository at the
 configured bucket (creating the bucket if necessary). To verify that
 initialization is successful, run the following command and ensure
-that status is "Completed".
+that "initStatus" is "Completed".
 
 .. code-block:: bash
 
-  $ kubectl -n kubedr-system get pod/<BACKUP_LOCATION_NAME>-init-pod
-
+  $ kubectl -n kubedr-system get backuplocations <BACKUP_LOCATION_NAME>
